@@ -1,5 +1,12 @@
-#Terraform-Practice
+# 📘 Terraform Practice Repository
 
+This repository contains a collection of example Terraform scenarios to practice key concepts, providers, and real-world infrastructure patterns across AWS, GCP, and Azure.
+
+---
+
+## 📁 Directory Structure
+
+```text
 terraform-practice/
 ├── 01-local-random-password/
 │    └── main.tf
@@ -32,5 +39,4 @@ terraform-practice/
 ├── 09-gke-cluster-setup/
 │    ├── main.tf
 │    └── variables.tf
-└── README.md
 
