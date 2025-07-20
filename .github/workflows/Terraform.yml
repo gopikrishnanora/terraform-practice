@@ -98,7 +98,7 @@ jobs:
         with:
           terraform_version: ${{ env.TF_VERSION }}
           
-      - name: Terraform Init & Apply
+      - name: Terraform Init, Plan & Apply
         working-directory: ${{ matrix.folder }}
         run: |
           terraform init
