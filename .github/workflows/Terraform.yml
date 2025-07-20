@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: Detect_Changes
     strategy:
-      matrix: ${{ fromJson(needs.detect-changes.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.Detect_Changes.outputs.matrix) }}
     defaults:
       run:
         working-directory: ${{ matrix.folder }}
@@ -85,7 +85,7 @@ jobs:
     needs: ["Detect_Changes", "Plan"]
     #if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     strategy:
-      matrix: ${{ fromJson(needs.detect-changes.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.Detect_Changes.outputs.matrix) }}
     defaults:
       run:
         working-directory: ${{ matrix.folder }}
