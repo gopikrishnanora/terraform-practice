@@ -2,12 +2,12 @@ name: Terraform CI
 
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - '**/*.tf'
-    types: [opened, synchronize]
-  push:
-    branches: [main]
+  #pull_request:
+  #  paths:
+  #    - '**/*.tf'
+  #  types: [opened, synchronize]
+  #push:
+  #  branches: [main]
 
 jobs:
   Plan:
@@ -40,7 +40,7 @@ jobs:
 
       - name: Upload Plan (PR context)
         #if: github.event_name == 'pull_request'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: plan-${{ matrix.folder }}
           path: ${{ matrix.folder }}/tfplan
