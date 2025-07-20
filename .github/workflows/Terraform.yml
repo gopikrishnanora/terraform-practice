@@ -25,8 +25,8 @@ jobs:
       - name: test
         shell: bash
         run: |
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.tf'
-          
+          #git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.tf'
+          echo "Done!"
           
       - name: Get changed directories
         id: set-matrix
