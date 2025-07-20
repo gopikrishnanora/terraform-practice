@@ -44,7 +44,13 @@ jobs:
         with:
           name: plan-${{ matrix.folder }}
           path: ${{ matrix.folder }}/tfplan
-
+    strategy:
+      matrix:
+        folder:
+          - 01-local-random-password
+          - 02-null-local-exec
+          - 03-local-create-file
+          
   Apply:
     name: Terraform Apply
     runs-on: ubuntu-latest
@@ -61,9 +67,4 @@ jobs:
         run: |
           terraform init
           terraform apply -auto-approve
-    strategy:
-      matrix:
-        folder:
-          - 01-local-random-password
-          - 02-null-local-exec
-          - 03-local-create-file
+
