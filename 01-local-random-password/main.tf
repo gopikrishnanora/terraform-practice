@@ -2,7 +2,7 @@ provider "random" {}
 
 resource "random_password" "admin" {
   length  = 16
-  #special = true
+  special = true
 }
 
 output "admin_password" {
