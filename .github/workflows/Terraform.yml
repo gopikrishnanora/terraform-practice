@@ -18,7 +18,7 @@ jobs:
     name: Detect Terraform Changes
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      matrix: ${{ steps.set-matrix.outputs.resource }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
