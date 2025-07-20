@@ -10,3 +10,4 @@ output "admin_password" {
   sensitive = true
 }
 
+
