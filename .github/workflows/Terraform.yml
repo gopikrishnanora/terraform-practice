@@ -99,9 +99,11 @@ jobs:
           terraform_version: ${{ env.TF_VERSION }}
           
       - name: Terraform Init, Plan & Apply
-        working-directory: ${{ matrix.folder }}
         run: |
           terraform init
           terraform apply -auto-approve
 
-
+      - name: Terraform State
+        run: |
+          ls -l
+          terraform state list -json
