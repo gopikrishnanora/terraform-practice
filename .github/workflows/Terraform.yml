@@ -41,7 +41,7 @@ jobs:
           #  | jq -s '{folder: .}')
           #echo "Changed directories matrix: $changed_dirs"
           #echo "matrix=$changed_dirs" >> $GITHUB_OUTPUT
-          echo "resource=['01-local-random-password']" >> $GITHUB_OUTPUT
+          echo "resource=['01-local-random-password', '02-local-create-file']" >> $GITHUB_OUTPUT
           
   Plan:
     name: Terraform Plan
