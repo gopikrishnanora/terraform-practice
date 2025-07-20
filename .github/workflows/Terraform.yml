@@ -32,14 +32,15 @@ jobs:
         id: set-matrix
         run: |
           echo "Finding changed .tf files..."
-          changed_dirs=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} \
-            | grep '\.tf$' \
-            | awk -F/ '{print $1}' \
-            | sort -u \
-            | jq -R . \
-            | jq -s '{folder: .}')
-          echo "Changed directories matrix: $changed_dirs"
-          echo "matrix=$changed_dirs" >> $GITHUB_OUTPUT
+          #changed_dirs=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} \
+          #  | grep '\.tf$' \
+          #  | awk -F/ '{print $1}' \
+          #  | sort -u \
+          #  | jq -R . \
+          #  | jq -s '{folder: .}')
+          #echo "Changed directories matrix: $changed_dirs"
+          #echo "matrix=$changed_dirs" >> $GITHUB_OUTPUT
+          echo "matrix=["01-local-random-password"]" >> $GITHUB_OUTPUT
           
   Plan:
     name: Terraform Plan
