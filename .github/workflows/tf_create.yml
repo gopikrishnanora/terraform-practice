@@ -37,7 +37,7 @@ jobs:
       - name: Terraform Plan
         #working-directory: ${{ matrix.folder }}
         run: |
-          cd terrafrom
+          cd terraform/
           terraform plan -out=tfplan
 
           
