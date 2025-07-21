@@ -1,4 +1,4 @@
-name: Terraform CI
+name: Create Resource
 
 on:
   workflow_dispatch:
