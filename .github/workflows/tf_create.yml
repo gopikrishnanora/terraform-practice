@@ -17,9 +17,6 @@ jobs:
   Plan:
     name: Terraform Plan
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ matrix.folder }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
