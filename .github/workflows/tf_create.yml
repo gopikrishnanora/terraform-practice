@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: .terrfrom/ #${{ matrix.folder }}
+        working-directory: terrfrom #${{ matrix.folder }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
