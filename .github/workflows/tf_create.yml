@@ -33,7 +33,8 @@ jobs:
         #working-directory: ${{ matrix.folder }}
         run: |
           echo ${GITHUB_REF}
-          echo "${{ github.repository }}" | awk -F'/' '{print $2}'
+          repo=`echo "${{ github.repository }}" | awk -F'/' '{print $2}'`
+          echo $repo
           terraform init
 
       - name: Terraform Validate
