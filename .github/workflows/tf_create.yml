@@ -31,7 +31,9 @@ jobs:
 
       - name: Terraform Init
         #working-directory: ${{ matrix.folder }}
-        run: terraform init
+        run: |
+          echo ${GITHUB_REF}
+          terraform init
 
       - name: Terraform Validate
         #working-directory: ${{ matrix.folder }}
